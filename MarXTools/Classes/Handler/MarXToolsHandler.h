@@ -8,7 +8,7 @@
 #ifndef MarXToolsHandler_h
 #define MarXToolsHandler_h
 
-#import "LWSystemConfiguration.h"
+#import "MarXToolsSystemConfiguration.h"
 #import "MarXToolsPCH.h"
 
 #endif /* MarXToolsHandler_h */

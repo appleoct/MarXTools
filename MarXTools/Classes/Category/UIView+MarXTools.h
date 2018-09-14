@@ -59,7 +59,24 @@
 - (void)lw_cornerRadius;
 - (void)lw_cornerRadius:(CGFloat)radius;
 - (void)lw_cornerRadius:(CGFloat)radius color:(UIColor *)color;
+- (void)lw_cornerBorder:(CGFloat)width color:(UIColor *)color;
 - (void)lw_cornerRadius:(CGFloat)radius borderColor:(UIColor *)color width:(CGFloat)width;
+
+/**
+ 设置圆角和边框
+ 
+ @param cornerRadii 圆角尺寸
+ @param backgroundColor 最好设置成白色
+ @param corners 视图的边角，4个边角 {UIRectCorner r = UIRectCornerTopLeft | UIRectCornerBottomLeft;}
+ @param borderColor 边框的颜色
+ @param borderWidth 边框的宽度
+ [v lw_setRoundedCorner:CGSizeMake(100, 100) backgroundColor:[UIColor whiteColor] corners:r borderColor:[UIColor blackColor] borderWidth:1];
+ */
+- (void)lw_setCorner:(CGSize)cornerRadii
+     backgroundColor:(nonnull UIColor *)backgroundColor
+             corners:(UIRectCorner)corners
+         borderColor:(nullable UIColor *)borderColor
+         borderWidth:(CGFloat)borderWidth;
 @end
 
 
@@ -113,4 +130,15 @@
 
 - (CGFloat)lw_endWithX:(CGFloat)x;
 - (CGFloat)lw_endWithY:(CGFloat)y;
+@end
+
+
+
+@interface CALayer (lw_cornerRadius)
+- (void)lw_setRoundedCorner:(CGSize)cornerRadii
+                cornerColor:(nonnull UIColor *)cornerColor
+                    corners:(UIRectCorner)corners
+                borderColor:(nullable UIColor *)borderColor
+                borderWidth:(CGFloat)borderWidth;
+@property (nonatomic, strong) NSString *_cornerLayerIdentifier;
 @end

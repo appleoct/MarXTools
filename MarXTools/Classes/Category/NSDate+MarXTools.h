@@ -17,20 +17,20 @@
 /**
  毫秒时间戳->NSDate
 
- @param timestamp 时间戳
+ @param timestamp 时间戳，是毫秒为单位
  @return NSDate
  */
-- (NSDate *)lw_longTimestamp_to_date:(long)timestamp;
-- (NSDate *)lw_longTimestampString_to_date:(NSString *)timestamp;
++ (NSDate *)lw_longTimestamp_to_date:(long)timestamp;
++ (NSDate *)lw_longTimestampString_to_date:(NSString *)timestamp;
 
 /**
  时间戳->NSDate
  
- @param timestamp 时间戳
+ @param timestamp 时间戳，是秒为单位
  @return NSDate
  */
-- (NSDate *)lw_timestamp_to_date:(long)timestamp;
-- (NSDate *)lw_timestampString_to_date:(NSString *)timestamp;
++ (NSDate *)lw_timestamp_to_date:(long)timestamp;
++ (NSDate *)lw_timestampString_to_date:(NSString *)timestamp;
 
 /**
  当前NSDate->时间戳
@@ -42,10 +42,9 @@
 /**
  NSDate->时间戳
  
- @param date NSDate
- @return 时间戳
+ @return 时间戳,是初始化后的NSDate调用这个方法
  */
-- (NSString *)lw_nsdate_to_timestamp:(NSDate *)date;
+- (NSString *)lw_nsdate_to_timestamp;
 
 
 /**
@@ -59,22 +58,22 @@
 /**
  毫秒时间戳->正常的时间
  yyyy-MM-dd HH:mm:ss
- @param timestamp 时间戳
+ @param timestamp 时间戳，以毫秒为单位
  @param format 格式
  @return 格式化后的时间
  */
-- (NSString *)lw_longTimestamp_to_normalTime:(long)timestamp format:(NSString *)format;
-- (NSString *)lw_longTimestampString_to_normalTime:(NSString *)timestampString format:(NSString *)format;
++ (NSString *)lw_longTimestamp_to_normalTime:(long)timestamp format:(NSString *)format;
++ (NSString *)lw_longTimestampString_to_normalTime:(NSString *)timestampString format:(NSString *)format;
 
 /**
  时间戳->正常的时间
  yyyy-MM-dd HH:mm:ss
- @param timestamp 时间戳
+ @param timestamp 时间戳，以秒为单位
  @param format 格式
  @return 格式化后的时间
  */
-- (NSString *)lw_timestamp_to_normalTime:(long)timestamp format:(NSString *)format;
-- (NSString *)lw_timestampString_to_normalTime:(NSString *)timestampString format:(NSString *)format;
++ (NSString *)lw_timestamp_to_normalTime:(long)timestamp format:(NSString *)format;
++ (NSString *)lw_timestampString_to_normalTime:(NSString *)timestampString format:(NSString *)format;
 
 /**
  当前NSDate->正常的时间
@@ -82,16 +81,24 @@
  @param format 格式
  @return 格式化后的时间
  */
-- (NSString *)lw_currentDate_to_noramlTimeWithFormat:(NSString *)format;
++ (NSString *)lw_currentDate_to_noramlTimeWithFormat:(NSString *)format;
 
 /**
  NSDate->正常的时间
 
- @param date NSDate
  @param format 格式
  @return 格式化后的时间
  */
-- (NSString *)lw_nsdate_to_normalTime:(NSDate *)date format:(NSString *)format;
+- (NSString *)lw_nsdate_to_normalTimeWithFormat:(NSString *)format;
+
+
+/**
+ 获取当前时间
+
+ @param format 返回时间的格式 {YYYY-MM-dd 、YYYY年MM月、HH:mm}
+ @return 返回的时间
+ */
++ (NSString *)lw_currentTimeWithFormat:(NSString *)format;
 @end
 
 
@@ -100,7 +107,7 @@
 #define D_DAY         86400
 #define D_WEEK        604800
 #define D_YEAR        31556926
-@interface NSDate (lw_calculate)
+@interface NSDate (lw_caendar)
 + (NSCalendar *) currentCalendar; // avoid bottlenecks
 
 // Relative dates from the current date

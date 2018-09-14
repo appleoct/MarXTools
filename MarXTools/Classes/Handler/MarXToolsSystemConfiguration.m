@@ -1,21 +1,21 @@
 //
-//  LWSystemConfiguration.m
+//  MarXToolsSystemConfiguration.m
 //  MarXTools
 //
 //  Created by CodeRiding on 2018/6/22.
 //
 
-#import "LWSystemConfiguration.h"
+#import "MarXToolsSystemConfiguration.h"
 #include <sys/mount.h>
 
 #import <CoreTelephony/CTTelephonyNetworkInfo.h>
 #import <CoreTelephony/CTCarrier.h>
-@implementation LWSystemConfiguration
+@implementation MarXToolsSystemConfiguration
 
 @end
 
 
-@implementation LWSystemConfiguration (lw_phone)
+@implementation MarXToolsSystemConfiguration (lw_phone)
 
 + (NSString *)lw_phone_uuid
 {
@@ -116,7 +116,7 @@
 @end
 
 
-@implementation LWSystemConfiguration (lw_cache)
+@implementation MarXToolsSystemConfiguration (lw_cache)
 + (void)lw_clearCache:(void (^)(void))completion
 {
     NSString *directoryPath =  [NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES) firstObject];

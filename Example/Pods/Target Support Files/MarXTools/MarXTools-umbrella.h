@@ -31,6 +31,7 @@
 #import "LWSystemConfiguration.h"
 #import "MarXToolsHandler.h"
 #import "MarXToolsPCH.h"
+#import "MarXToolsProgress.h"
 #import "MBProgressHUD+MarXTools.h"
 #import "MarXToolsToast.h"
 

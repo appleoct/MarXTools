@@ -1,6 +1,6 @@
 {
   "name": "MarXTools",
-  "version": "0.9.0",
+  "version": "0.11.0",
   "summary": "MarX Repo",
   "description": "TODO: Add long description of the pod here.",
   "homepage": "https://gitee.com/erliucxy/MarXTools",
@@ -13,7 +13,7 @@
   },
   "source": {
     "git": "https://gitee.com/erliucxy/MarXTools.git",
-    "tag": "0.9.0"
+    "tag": "0.11.0"
   },
   "frameworks": [
     "UIKit",
@@ -41,10 +41,10 @@
       "public_header_files": "MarXTools/Classes/ThirdParty/**/*.h",
       "dependencies": {
         "Toast": [
-          "3.0"
+          "~> 3.0"
         ],
         "MBProgressHUD": [
-          "1.1.0"
+          "~> 1.1.0"
         ]
       }
     }

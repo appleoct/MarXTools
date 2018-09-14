@@ -104,6 +104,11 @@
     [self lw_cornerRadius:radius borderColor:color width:1.0];
 }
 
+- (void)lw_cornerBorder:(CGFloat)width color:(UIColor *)color
+{
+    [self lw_cornerRadius:0 borderColor:color width:width];
+}
+
 - (void)lw_cornerRadius:(CGFloat)radius borderColor:(UIColor *)color width:(CGFloat)width
 {
     if (!self.backgroundColor) {
@@ -118,57 +123,38 @@
 
 
 
-- (void)lw_cornerTopLeft
-{
-    [self lw_cornerTopLeftWithSize:CGSizeMake(10, 10)];
+/**
+ 传说中更加优秀的性能
+
+ @param radius 圆角尺寸
+ */
+- (void)lw_setCorner:(CGFloat)radius {
+    [self lw_setCorner:radius backgroundColor:[UIColor whiteColor]];
 }
 
-- (void)lw_cornerTopRight
-{
-    [self lw_cornerTopRightWithSize:CGSizeMake(10, 10)];
+- (void)lw_setCorner:(CGFloat)radius
+     backgroundColor:(nonnull UIColor *)backgroundColor {
+    [self lw_setCorner:radius backgroundColor:backgroundColor corners:UIRectCornerAllCorners];
 }
 
-- (void)lw_cornerBottomLeft
-{
-    [self lw_cornerBottomLeftWithSize:CGSizeMake(10, 10)];
+- (void)lw_setCorner:(CGFloat)radius
+     backgroundColor:(nonnull UIColor *)backgroundColor
+             corners:(UIRectCorner)corners {
+    [self lw_setCorner:CGSizeMake(radius, radius) backgroundColor:backgroundColor corners:corners borderColor:nil borderWidth:0];
 }
 
-- (void)lw_cornerBottomRight
-{
-    [self lw_cornerBottomRightWithSize:CGSizeMake(10, 10)];
-}
-
-- (void)lw_cornerTopLeftWithSize:(CGSize)size
-{
-    [self lw_cornerWithRectCorner:UIRectCornerTopLeft size:size];
-}
-
-- (void)lw_cornerTopRightWithSize:(CGSize)size
-{
-    [self lw_cornerWithRectCorner:UIRectCornerTopRight size:size];
-}
-
-- (void)lw_cornerBottomLeftWithSize:(CGSize)size
-{
-    [self lw_cornerWithRectCorner:UIRectCornerBottomLeft size:size];
-}
-
-- (void)lw_cornerBottomRightWithSize:(CGSize)size
-{
-    [self lw_cornerWithRectCorner:UIRectCornerBottomRight size:size];
-}
-
-- (void)lw_cornerWithRectCorner:(UIRectCorner)corner size:(CGSize)size
-{
-    CGRect rect = CGRectMake(0, 0, self.bounds.size.width, self.bounds.size.height);
-    // 贝塞尔曲线 给矩形可添加圆角的方法
-    UIBezierPath * path = [UIBezierPath bezierPathWithRoundedRect:rect byRoundingCorners:corner cornerRadii:size];
-    // 创建shaplayer
-    CAShapeLayer * masklayer = [[CAShapeLayer alloc]init];
-    masklayer.frame = self.bounds;
-    // 设置路径
-    masklayer.path = path.CGPath;
-    self.layer.mask = masklayer;
+- (void)lw_setCorner:(CGSize)cornerRadii
+     backgroundColor:(nonnull UIColor *)backgroundColor
+             corners:(UIRectCorner)corners
+         borderColor:(nullable UIColor *)borderColor
+         borderWidth:(CGFloat)borderWidth {
+    //only scaleAspectFill not cause offscreen-renderd, do this for better display
+    if ([self isKindOfClass:[UIImageView class]]) {
+        self.contentMode = UIViewContentModeScaleAspectFill;
+        self.clipsToBounds = YES;
+    }
+    
+    [self.layer lw_setRoundedCorner:cornerRadii cornerColor:backgroundColor corners:corners borderColor:borderColor borderWidth:borderWidth];
 }
 
 @end
@@ -415,6 +401,92 @@ static char pointViewKey;
 {
     CGRect frame = self.frame;
     return CGRectGetMaxY(frame) + y;
+}
+
+@end
+
+
+
+
+
+
+
+
+@interface _RoundedCornerLayer : CALayer
+@end
+
+@implementation _RoundedCornerLayer
+@end
+
+
+
+@implementation CALayer (lw_cornerRadius)
+
+- (void)lw_setRoundedCorner:(CGSize)cornerRadii
+                cornerColor:(nonnull UIColor *)cornerColor
+                    corners:(UIRectCorner)corners
+                borderColor:(nullable UIColor *)borderColor
+                borderWidth:(CGFloat)borderWidth {
+    NSString *key = [NSString stringWithFormat:@"Identifier_%@x%@_%@_%@_%@_%@", @(cornerRadii.width), @(cornerRadii.height), cornerColor.description, @(corners), borderColor.description, @(borderWidth)];
+    if ([key isEqualToString:self._cornerLayerIdentifier]) {
+        //无需重复设置
+        return;
+    } else {
+        self._cornerLayerIdentifier = key;
+    }
+    
+    //remove exit layer
+    for (CALayer *layer in self.sublayers) {
+        if ([layer isKindOfClass:[_RoundedCornerLayer class]]) {
+            [layer removeFromSuperlayer];
+            break;
+        }
+    }
+    
+    UIGraphicsBeginImageContextWithOptions(self.bounds.size, NO, 0);
+    CGContextRef context = UIGraphicsGetCurrentContext();
+    if (!context) {return;}
+    
+    //draw round corner by using eo rule
+    CGContextSetLineWidth(context, 0);
+    CGContextSetFillColorWithColor(context, cornerColor.CGColor);
+    
+    //outer rect path
+    UIBezierPath *rectPath = [UIBezierPath bezierPathWithRect:self.bounds];
+    //inner round path
+    UIBezierPath *roundPath = [UIBezierPath bezierPathWithRoundedRect:self.bounds byRoundingCorners:corners cornerRadii:cornerRadii];
+    [rectPath appendPath:roundPath];
+    
+    CGContextAddPath(context, rectPath.CGPath);
+    CGContextEOFillPath(context);
+    
+    //set border
+    if (borderColor && borderWidth > 0) {
+        CGContextSetFillColorWithColor(context, borderColor.CGColor);
+        UIBezierPath *borderOutterPath = [UIBezierPath bezierPathWithRoundedRect:self.bounds byRoundingCorners:corners cornerRadii:cornerRadii];
+        UIBezierPath *borderInnerPath = [UIBezierPath bezierPathWithRoundedRect:CGRectInset(self.bounds, borderWidth, borderWidth) byRoundingCorners:corners cornerRadii:cornerRadii];
+        [borderOutterPath appendPath:borderInnerPath];
+        
+        CGContextAddPath(context, borderOutterPath.CGPath);
+        CGContextEOFillPath(context);
+    }
+    
+    UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    
+    _RoundedCornerLayer *subLayer = [_RoundedCornerLayer new];
+    subLayer.frame = self.bounds;
+    subLayer.opaque = YES;
+    subLayer.contents = (__bridge id _Nullable)(image.CGImage);
+    [self addSublayer:subLayer];
+}
+
+- (NSString *)_cornerLayerIdentifier {
+    return objc_getAssociatedObject(self, @selector(_cornerLayerIdentifier));
+}
+
+- (void)set_cornerLayerIdentifier:(NSString *)_cornerLayerIdentifier {
+    objc_setAssociatedObject(self, @selector(_cornerLayerIdentifier), _cornerLayerIdentifier, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
 }
 
 @end

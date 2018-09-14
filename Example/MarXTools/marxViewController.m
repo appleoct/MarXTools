@@ -20,9 +20,9 @@
     [super viewDidLoad];
     
     UIButton *v = [[UIButton alloc]initWithFrame:CGRectMake(self.view.lw_centerX, self.view.lw_centerY, 200, 200)];
-    v.backgroundColor = [UIColor lw_color_hexString:@"#eeeeee"];
+//    v.backgroundColor = UIColor.greenColor;
     [v addTarget:self action:@selector(clickbutton) forControlEvents:UIControlEventTouchDown];
-    [v lw_cycleView];
+    [v lw_cornerBorder:1 color:[UIColor redColor]];
     v.lw_click_timeInterval = 6;
     [self.view addSubview:v];
 	// Do any additional setup after loading the view, typically from a nib.

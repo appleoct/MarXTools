@@ -14,7 +14,7 @@
 #define lw_progress_show()     [MBProgressHUD lw_showHubOnWindow]
 #define lw_progress_hide()     [MBProgressHUD lw_hideHubOnWindow]
 
-#define lw_progress_show(msg)  [MBProgressHUD lw_showHubOnWindow:msg]
+#define lw_progress_showMsg(msg)  [MBProgressHUD lw_showHubOnWindow:msg]
 #define lw_progress_show_hideAfter(msg,interval)  [MBProgressHUD lw_showHubOnWindow:msg hideAfter:interval]
 
 #endif /* MarXToolsProgress_h */
