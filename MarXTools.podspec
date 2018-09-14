@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "MarXTools"
-  s.version      = "0.0.1"
+  s.version      = "1.1.2"
   s.summary      = "OC常用工具类"
 
   # This description is used to generate tags and improve search results.
