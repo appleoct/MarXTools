@@ -18,7 +18,7 @@
 @property (nonatomic, assign) BOOL isIgnoreEvent;
 @end
 
-static float lw_button_touch_default_interval = 0.01;
+static float lw_button_touch_default_interval = 5.0;
 @implementation UIButton (lw_touch)
 
 + (void)load

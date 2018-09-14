@@ -21,24 +21,23 @@
 		6003F5BA195388D20070C39A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6003F5B8195388D20070C39A /* InfoPlist.strings */; };
 		6003F5BC195388D20070C39A /* Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6003F5BB195388D20070C39A /* Tests.m */; };
 		71719F9F1E33DC2100824A3D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 71719F9D1E33DC2100824A3D /* LaunchScreen.storyboard */; };
-		81AF75E220F6DC51003AB709 /* NSObject+MarXTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 81AF75C520F6DC4F003AB709 /* NSObject+MarXTools.m */; };
-		81AF75E320F6DC51003AB709 /* NSUserDefaults+MarXTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 81AF75C620F6DC4F003AB709 /* NSUserDefaults+MarXTools.m */; };
-		81AF75E420F6DC51003AB709 /* UIView+MarXTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 81AF75C820F6DC4F003AB709 /* UIView+MarXTools.m */; };
-		81AF75E520F6DC51003AB709 /* UIImage+MarXTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 81AF75CD20F6DC50003AB709 /* UIImage+MarXTools.m */; };
-		81AF75E620F6DC51003AB709 /* UIImageView+MarXTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 81AF75CE20F6DC50003AB709 /* UIImageView+MarXTools.m */; };
-		81AF75E720F6DC51003AB709 /* UITextField+MarXTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 81AF75CF20F6DC50003AB709 /* UITextField+MarXTools.m */; };
-		81AF75E820F6DC51003AB709 /* NSString+MarXTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 81AF75D020F6DC50003AB709 /* NSString+MarXTools.m */; };
-		81AF75E920F6DC51003AB709 /* UITextView+MarXTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 81AF75D120F6DC50003AB709 /* UITextView+MarXTools.m */; };
-		81AF75EA20F6DC51003AB709 /* NSDictionary+MarXTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 81AF75D220F6DC50003AB709 /* NSDictionary+MarXTools.m */; };
-		81AF75EB20F6DC51003AB709 /* UILabel+MarXTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 81AF75D320F6DC50003AB709 /* UILabel+MarXTools.m */; };
-		81AF75EC20F6DC51003AB709 /* NSArray+MarXTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 81AF75D420F6DC50003AB709 /* NSArray+MarXTools.m */; };
-		81AF75ED20F6DC51003AB709 /* UIViewController+MarXTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 81AF75D620F6DC50003AB709 /* UIViewController+MarXTools.m */; };
-		81AF75EE20F6DC51003AB709 /* UIColor+MarXTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 81AF75D920F6DC50003AB709 /* UIColor+MarXTools.m */; };
-		81AF75EF20F6DC51003AB709 /* UIWindow+MarXTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 81AF75DC20F6DC51003AB709 /* UIWindow+MarXTools.m */; };
-		81AF75F020F6DC51003AB709 /* NSDate+MarXTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 81AF75DD20F6DC51003AB709 /* NSDate+MarXTools.m */; };
-		81AF75F120F6DC51003AB709 /* UIButton+MarXTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 81AF75E120F6DC51003AB709 /* UIButton+MarXTools.m */; };
-		81DD633620DCFAE7004A49F6 /* MarXToolsSystemConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = 81DD630E20DCFAE7004A49F6 /* MarXToolsSystemConfiguration.m */; };
-		81F892CF20E4C28900460F48 /* MBProgressHUD+MarXTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 81F892CE20E4C28900460F48 /* MBProgressHUD+MarXTools.m */; };
+		81DD633620DCFAE7004A49F6 /* LWSystemConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = 81DD630E20DCFAE7004A49F6 /* LWSystemConfiguration.m */; };
+		81DD633720DCFAE7004A49F6 /* UITextField+MarXTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 81DD631420DCFAE7004A49F6 /* UITextField+MarXTools.m */; };
+		81DD633820DCFAE7004A49F6 /* NSArray+MarXTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 81DD631620DCFAE7004A49F6 /* NSArray+MarXTools.m */; };
+		81DD633920DCFAE7004A49F6 /* UILabel+MarXTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 81DD631920DCFAE7004A49F6 /* UILabel+MarXTools.m */; };
+		81DD633A20DCFAE7004A49F6 /* UIViewController+MarXTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 81DD632120DCFAE7004A49F6 /* UIViewController+MarXTools.m */; };
+		81DD633B20DCFAE7004A49F6 /* UIImage+MarXTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 81DD632220DCFAE7004A49F6 /* UIImage+MarXTools.m */; };
+		81DD633C20DCFAE7004A49F6 /* NSDate+MarXTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 81DD632320DCFAE7004A49F6 /* NSDate+MarXTools.m */; };
+		81DD633D20DCFAE7004A49F6 /* UIWindow+MarXTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 81DD632520DCFAE7004A49F6 /* UIWindow+MarXTools.m */; };
+		81DD633E20DCFAE7004A49F6 /* NSString+MarXTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 81DD632720DCFAE7004A49F6 /* NSString+MarXTools.m */; };
+		81DD633F20DCFAE7004A49F6 /* UIColor+MarXTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 81DD632920DCFAE7004A49F6 /* UIColor+MarXTools.m */; };
+		81DD634020DCFAE7004A49F6 /* UIImageView+MarXTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 81DD632A20DCFAE7004A49F6 /* UIImageView+MarXTools.m */; };
+		81DD634120DCFAE7004A49F6 /* NSObject+MarXTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 81DD632B20DCFAE7004A49F6 /* NSObject+MarXTools.m */; };
+		81DD634220DCFAE7004A49F6 /* UITextView+MarXTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 81DD632C20DCFAE7004A49F6 /* UITextView+MarXTools.m */; };
+		81DD634320DCFAE7004A49F6 /* NSDictionary+MarXTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 81DD632D20DCFAE7004A49F6 /* NSDictionary+MarXTools.m */; };
+		81DD634420DCFAE7004A49F6 /* NSUserDefaults+MarXTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 81DD632F20DCFAE7004A49F6 /* NSUserDefaults+MarXTools.m */; };
+		81DD634520DCFAE7004A49F6 /* UIView+MarXTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 81DD633220DCFAE7004A49F6 /* UIView+MarXTools.m */; };
+		81DD634620DCFAE7004A49F6 /* UIButton+MarXTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 81DD633320DCFAE7004A49F6 /* UIButton+MarXTools.m */; };
 		873B8AEB1B1F5CCA007FD442 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 873B8AEA1B1F5CCA007FD442 /* Main.storyboard */; };
 		C4905C7FA50D4A6B8A616152 /* Pods_MarXTools_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C529C5807ADB52FA3BC5E8B5 /* Pods_MarXTools_Tests.framework */; };
 		C98ED880D47C26EC052AABFC /* Pods_MarXTools_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E036F8D7FA11D446C919FF6 /* Pods_MarXTools_Example.framework */; };
@@ -79,48 +78,44 @@
 		606FC2411953D9B200FFA9A0 /* Tests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Tests-Prefix.pch"; sourceTree = "<group>"; };
 		71719F9E1E33DC2100824A3D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		75542D71E3E05A73DB93158F /* Pods-MarXTools_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MarXTools_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-MarXTools_Example/Pods-MarXTools_Example.release.xcconfig"; sourceTree = "<group>"; };
-		813EFAED20E473FB005E37AD /* MarXToolsToast.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MarXToolsToast.h; sourceTree = "<group>"; };
-		81AF75C120F6DC4F003AB709 /* UIImageView+MarXTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+MarXTools.h"; sourceTree = "<group>"; };
-		81AF75C220F6DC4F003AB709 /* NSDictionary+MarXTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+MarXTools.h"; sourceTree = "<group>"; };
-		81AF75C320F6DC4F003AB709 /* NSObject+MarXTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+MarXTools.h"; sourceTree = "<group>"; };
-		81AF75C420F6DC4F003AB709 /* UILabel+MarXTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UILabel+MarXTools.h"; sourceTree = "<group>"; };
-		81AF75C520F6DC4F003AB709 /* NSObject+MarXTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+MarXTools.m"; sourceTree = "<group>"; };
-		81AF75C620F6DC4F003AB709 /* NSUserDefaults+MarXTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSUserDefaults+MarXTools.m"; sourceTree = "<group>"; };
-		81AF75C720F6DC4F003AB709 /* UIImage+MarXTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+MarXTools.h"; sourceTree = "<group>"; };
-		81AF75C820F6DC4F003AB709 /* UIView+MarXTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+MarXTools.m"; sourceTree = "<group>"; };
-		81AF75C920F6DC4F003AB709 /* UIViewController+MarXTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+MarXTools.h"; sourceTree = "<group>"; };
-		81AF75CA20F6DC4F003AB709 /* NSDate+MarXTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+MarXTools.h"; sourceTree = "<group>"; };
-		81AF75CB20F6DC4F003AB709 /* UITextField+MarXTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITextField+MarXTools.h"; sourceTree = "<group>"; };
-		81AF75CC20F6DC4F003AB709 /* UITextView+MarXTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITextView+MarXTools.h"; sourceTree = "<group>"; };
-		81AF75CD20F6DC50003AB709 /* UIImage+MarXTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+MarXTools.m"; sourceTree = "<group>"; };
-		81AF75CE20F6DC50003AB709 /* UIImageView+MarXTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+MarXTools.m"; sourceTree = "<group>"; };
-		81AF75CF20F6DC50003AB709 /* UITextField+MarXTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITextField+MarXTools.m"; sourceTree = "<group>"; };
-		81AF75D020F6DC50003AB709 /* NSString+MarXTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+MarXTools.m"; sourceTree = "<group>"; };
-		81AF75D120F6DC50003AB709 /* UITextView+MarXTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITextView+MarXTools.m"; sourceTree = "<group>"; };
-		81AF75D220F6DC50003AB709 /* NSDictionary+MarXTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+MarXTools.m"; sourceTree = "<group>"; };
-		81AF75D320F6DC50003AB709 /* UILabel+MarXTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UILabel+MarXTools.m"; sourceTree = "<group>"; };
-		81AF75D420F6DC50003AB709 /* NSArray+MarXTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+MarXTools.m"; sourceTree = "<group>"; };
-		81AF75D520F6DC50003AB709 /* UIWindow+MarXTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIWindow+MarXTools.h"; sourceTree = "<group>"; };
-		81AF75D620F6DC50003AB709 /* UIViewController+MarXTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+MarXTools.m"; sourceTree = "<group>"; };
-		81AF75D720F6DC50003AB709 /* UIView+MarXTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+MarXTools.h"; sourceTree = "<group>"; };
-		81AF75D820F6DC50003AB709 /* NSUserDefaults+MarXTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSUserDefaults+MarXTools.h"; sourceTree = "<group>"; };
-		81AF75D920F6DC50003AB709 /* UIColor+MarXTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+MarXTools.m"; sourceTree = "<group>"; };
-		81AF75DA20F6DC50003AB709 /* NSArray+MarXTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+MarXTools.h"; sourceTree = "<group>"; };
-		81AF75DB20F6DC50003AB709 /* UIButton+MarXTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+MarXTools.h"; sourceTree = "<group>"; };
-		81AF75DC20F6DC51003AB709 /* UIWindow+MarXTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIWindow+MarXTools.m"; sourceTree = "<group>"; };
-		81AF75DD20F6DC51003AB709 /* NSDate+MarXTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+MarXTools.m"; sourceTree = "<group>"; };
-		81AF75DE20F6DC51003AB709 /* UIColor+MarXTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+MarXTools.h"; sourceTree = "<group>"; };
-		81AF75DF20F6DC51003AB709 /* MarXToolsCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MarXToolsCategory.h; sourceTree = "<group>"; };
-		81AF75E020F6DC51003AB709 /* NSString+MarXTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+MarXTools.h"; sourceTree = "<group>"; };
-		81AF75E120F6DC51003AB709 /* UIButton+MarXTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+MarXTools.m"; sourceTree = "<group>"; };
-		81DD630E20DCFAE7004A49F6 /* MarXToolsSystemConfiguration.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MarXToolsSystemConfiguration.m; sourceTree = "<group>"; };
+		81DD630E20DCFAE7004A49F6 /* LWSystemConfiguration.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LWSystemConfiguration.m; sourceTree = "<group>"; };
 		81DD630F20DCFAE7004A49F6 /* MarXToolsHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MarXToolsHandler.h; sourceTree = "<group>"; };
 		81DD631020DCFAE7004A49F6 /* MarXToolsPCH.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MarXToolsPCH.h; sourceTree = "<group>"; };
-		81DD631120DCFAE7004A49F6 /* MarXToolsSystemConfiguration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MarXToolsSystemConfiguration.h; sourceTree = "<group>"; };
+		81DD631120DCFAE7004A49F6 /* LWSystemConfiguration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LWSystemConfiguration.h; sourceTree = "<group>"; };
+		81DD631320DCFAE7004A49F6 /* UIColor+MarXTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+MarXTools.h"; sourceTree = "<group>"; };
+		81DD631420DCFAE7004A49F6 /* UITextField+MarXTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITextField+MarXTools.m"; sourceTree = "<group>"; };
+		81DD631520DCFAE7004A49F6 /* NSString+MarXTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+MarXTools.h"; sourceTree = "<group>"; };
+		81DD631620DCFAE7004A49F6 /* NSArray+MarXTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+MarXTools.m"; sourceTree = "<group>"; };
+		81DD631720DCFAE7004A49F6 /* UIWindow+MarXTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIWindow+MarXTools.h"; sourceTree = "<group>"; };
+		81DD631820DCFAE7004A49F6 /* NSDate+MarXTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+MarXTools.h"; sourceTree = "<group>"; };
+		81DD631920DCFAE7004A49F6 /* UILabel+MarXTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UILabel+MarXTools.m"; sourceTree = "<group>"; };
+		81DD631A20DCFAE7004A49F6 /* NSDictionary+MarXTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+MarXTools.h"; sourceTree = "<group>"; };
+		81DD631B20DCFAE7004A49F6 /* UITextView+MarXTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITextView+MarXTools.h"; sourceTree = "<group>"; };
+		81DD631C20DCFAE7004A49F6 /* NSObject+MarXTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+MarXTools.h"; sourceTree = "<group>"; };
+		81DD631D20DCFAE7004A49F6 /* UIImageView+MarXTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+MarXTools.h"; sourceTree = "<group>"; };
+		81DD631E20DCFAE7004A49F6 /* NSUserDefaults+MarXTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSUserDefaults+MarXTools.h"; sourceTree = "<group>"; };
+		81DD631F20DCFAE7004A49F6 /* UIButton+MarXTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+MarXTools.h"; sourceTree = "<group>"; };
+		81DD632020DCFAE7004A49F6 /* UIView+MarXTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+MarXTools.h"; sourceTree = "<group>"; };
+		81DD632120DCFAE7004A49F6 /* UIViewController+MarXTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+MarXTools.m"; sourceTree = "<group>"; };
+		81DD632220DCFAE7004A49F6 /* UIImage+MarXTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+MarXTools.m"; sourceTree = "<group>"; };
+		81DD632320DCFAE7004A49F6 /* NSDate+MarXTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+MarXTools.m"; sourceTree = "<group>"; };
+		81DD632420DCFAE7004A49F6 /* UILabel+MarXTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UILabel+MarXTools.h"; sourceTree = "<group>"; };
+		81DD632520DCFAE7004A49F6 /* UIWindow+MarXTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIWindow+MarXTools.m"; sourceTree = "<group>"; };
+		81DD632620DCFAE7004A49F6 /* NSArray+MarXTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+MarXTools.h"; sourceTree = "<group>"; };
+		81DD632720DCFAE7004A49F6 /* NSString+MarXTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+MarXTools.m"; sourceTree = "<group>"; };
+		81DD632820DCFAE7004A49F6 /* UITextField+MarXTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITextField+MarXTools.h"; sourceTree = "<group>"; };
+		81DD632920DCFAE7004A49F6 /* UIColor+MarXTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+MarXTools.m"; sourceTree = "<group>"; };
+		81DD632A20DCFAE7004A49F6 /* UIImageView+MarXTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+MarXTools.m"; sourceTree = "<group>"; };
+		81DD632B20DCFAE7004A49F6 /* NSObject+MarXTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+MarXTools.m"; sourceTree = "<group>"; };
+		81DD632C20DCFAE7004A49F6 /* UITextView+MarXTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITextView+MarXTools.m"; sourceTree = "<group>"; };
+		81DD632D20DCFAE7004A49F6 /* NSDictionary+MarXTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+MarXTools.m"; sourceTree = "<group>"; };
+		81DD632E20DCFAE7004A49F6 /* MarXToolsCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MarXToolsCategory.h; sourceTree = "<group>"; };
+		81DD632F20DCFAE7004A49F6 /* NSUserDefaults+MarXTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSUserDefaults+MarXTools.m"; sourceTree = "<group>"; };
+		81DD633020DCFAE7004A49F6 /* UIImage+MarXTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+MarXTools.h"; sourceTree = "<group>"; };
+		81DD633120DCFAE7004A49F6 /* UIViewController+MarXTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+MarXTools.h"; sourceTree = "<group>"; };
+		81DD633220DCFAE7004A49F6 /* UIView+MarXTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+MarXTools.m"; sourceTree = "<group>"; };
+		81DD633320DCFAE7004A49F6 /* UIButton+MarXTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+MarXTools.m"; sourceTree = "<group>"; };
 		81DD633420DCFAE7004A49F6 /* MarXTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MarXTools.h; sourceTree = "<group>"; };
-		81F892CD20E4C28900460F48 /* MBProgressHUD+MarXTools.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MBProgressHUD+MarXTools.h"; sourceTree = "<group>"; };
-		81F892CE20E4C28900460F48 /* MBProgressHUD+MarXTools.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "MBProgressHUD+MarXTools.m"; sourceTree = "<group>"; };
-		81F892D020E4D49600460F48 /* MarXToolsProgress.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MarXToolsProgress.h; sourceTree = "<group>"; };
 		827599E880D61D1D4225CEE4 /* Pods-MarXTools_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MarXTools_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MarXTools_Tests/Pods-MarXTools_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		873B8AEA1B1F5CCA007FD442 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B31B7E44077224223E75F70A /* Pods-MarXTools_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MarXTools_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MarXTools_Example/Pods-MarXTools_Example.debug.xcconfig"; sourceTree = "<group>"; };
@@ -257,23 +252,6 @@
 			name = "Podspec Metadata";
 			sourceTree = "<group>";
 		};
-		813EFAEB20E473FA005E37AD /* ThirdParty */ = {
-			isa = PBXGroup;
-			children = (
-				81F892CC20E4C19800460F48 /* Progress */,
-				813EFAEC20E473FB005E37AD /* Toast */,
-			);
-			path = ThirdParty;
-			sourceTree = "<group>";
-		};
-		813EFAEC20E473FB005E37AD /* Toast */ = {
-			isa = PBXGroup;
-			children = (
-				813EFAED20E473FB005E37AD /* MarXToolsToast.h */,
-			);
-			path = Toast;
-			sourceTree = "<group>";
-		};
 		81DD630B20DCFAE7004A49F6 /* MarXTools */ = {
 			isa = PBXGroup;
 			children = (
@@ -287,7 +265,6 @@
 		81DD630C20DCFAE7004A49F6 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				813EFAEB20E473FA005E37AD /* ThirdParty */,
 				81DD630D20DCFAE7004A49F6 /* Handler */,
 				81DD631220DCFAE7004A49F6 /* Category */,
 				81DD633420DCFAE7004A49F6 /* MarXTools.h */,
@@ -298,10 +275,10 @@
 		81DD630D20DCFAE7004A49F6 /* Handler */ = {
 			isa = PBXGroup;
 			children = (
-				81DD631120DCFAE7004A49F6 /* MarXToolsSystemConfiguration.h */,
-				81DD630E20DCFAE7004A49F6 /* MarXToolsSystemConfiguration.m */,
+				81DD630E20DCFAE7004A49F6 /* LWSystemConfiguration.m */,
 				81DD630F20DCFAE7004A49F6 /* MarXToolsHandler.h */,
 				81DD631020DCFAE7004A49F6 /* MarXToolsPCH.h */,
+				81DD631120DCFAE7004A49F6 /* LWSystemConfiguration.h */,
 			);
 			path = Handler;
 			sourceTree = "<group>";
@@ -309,39 +286,39 @@
 		81DD631220DCFAE7004A49F6 /* Category */ = {
 			isa = PBXGroup;
 			children = (
-				81AF75DF20F6DC51003AB709 /* MarXToolsCategory.h */,
-				81AF75DA20F6DC50003AB709 /* NSArray+MarXTools.h */,
-				81AF75D420F6DC50003AB709 /* NSArray+MarXTools.m */,
-				81AF75CA20F6DC4F003AB709 /* NSDate+MarXTools.h */,
-				81AF75DD20F6DC51003AB709 /* NSDate+MarXTools.m */,
-				81AF75C220F6DC4F003AB709 /* NSDictionary+MarXTools.h */,
-				81AF75D220F6DC50003AB709 /* NSDictionary+MarXTools.m */,
-				81AF75C320F6DC4F003AB709 /* NSObject+MarXTools.h */,
-				81AF75C520F6DC4F003AB709 /* NSObject+MarXTools.m */,
-				81AF75E020F6DC51003AB709 /* NSString+MarXTools.h */,
-				81AF75D020F6DC50003AB709 /* NSString+MarXTools.m */,
-				81AF75D820F6DC50003AB709 /* NSUserDefaults+MarXTools.h */,
-				81AF75C620F6DC4F003AB709 /* NSUserDefaults+MarXTools.m */,
-				81AF75DB20F6DC50003AB709 /* UIButton+MarXTools.h */,
-				81AF75E120F6DC51003AB709 /* UIButton+MarXTools.m */,
-				81AF75DE20F6DC51003AB709 /* UIColor+MarXTools.h */,
-				81AF75D920F6DC50003AB709 /* UIColor+MarXTools.m */,
-				81AF75C720F6DC4F003AB709 /* UIImage+MarXTools.h */,
-				81AF75CD20F6DC50003AB709 /* UIImage+MarXTools.m */,
-				81AF75C120F6DC4F003AB709 /* UIImageView+MarXTools.h */,
-				81AF75CE20F6DC50003AB709 /* UIImageView+MarXTools.m */,
-				81AF75C420F6DC4F003AB709 /* UILabel+MarXTools.h */,
-				81AF75D320F6DC50003AB709 /* UILabel+MarXTools.m */,
-				81AF75CB20F6DC4F003AB709 /* UITextField+MarXTools.h */,
-				81AF75CF20F6DC50003AB709 /* UITextField+MarXTools.m */,
-				81AF75CC20F6DC4F003AB709 /* UITextView+MarXTools.h */,
-				81AF75D120F6DC50003AB709 /* UITextView+MarXTools.m */,
-				81AF75D720F6DC50003AB709 /* UIView+MarXTools.h */,
-				81AF75C820F6DC4F003AB709 /* UIView+MarXTools.m */,
-				81AF75C920F6DC4F003AB709 /* UIViewController+MarXTools.h */,
-				81AF75D620F6DC50003AB709 /* UIViewController+MarXTools.m */,
-				81AF75D520F6DC50003AB709 /* UIWindow+MarXTools.h */,
-				81AF75DC20F6DC51003AB709 /* UIWindow+MarXTools.m */,
+				81DD631320DCFAE7004A49F6 /* UIColor+MarXTools.h */,
+				81DD631420DCFAE7004A49F6 /* UITextField+MarXTools.m */,
+				81DD631520DCFAE7004A49F6 /* NSString+MarXTools.h */,
+				81DD631620DCFAE7004A49F6 /* NSArray+MarXTools.m */,
+				81DD631720DCFAE7004A49F6 /* UIWindow+MarXTools.h */,
+				81DD631820DCFAE7004A49F6 /* NSDate+MarXTools.h */,
+				81DD631920DCFAE7004A49F6 /* UILabel+MarXTools.m */,
+				81DD631A20DCFAE7004A49F6 /* NSDictionary+MarXTools.h */,
+				81DD631B20DCFAE7004A49F6 /* UITextView+MarXTools.h */,
+				81DD631C20DCFAE7004A49F6 /* NSObject+MarXTools.h */,
+				81DD631D20DCFAE7004A49F6 /* UIImageView+MarXTools.h */,
+				81DD631E20DCFAE7004A49F6 /* NSUserDefaults+MarXTools.h */,
+				81DD631F20DCFAE7004A49F6 /* UIButton+MarXTools.h */,
+				81DD632020DCFAE7004A49F6 /* UIView+MarXTools.h */,
+				81DD632120DCFAE7004A49F6 /* UIViewController+MarXTools.m */,
+				81DD632220DCFAE7004A49F6 /* UIImage+MarXTools.m */,
+				81DD632320DCFAE7004A49F6 /* NSDate+MarXTools.m */,
+				81DD632420DCFAE7004A49F6 /* UILabel+MarXTools.h */,
+				81DD632520DCFAE7004A49F6 /* UIWindow+MarXTools.m */,
+				81DD632620DCFAE7004A49F6 /* NSArray+MarXTools.h */,
+				81DD632720DCFAE7004A49F6 /* NSString+MarXTools.m */,
+				81DD632820DCFAE7004A49F6 /* UITextField+MarXTools.h */,
+				81DD632920DCFAE7004A49F6 /* UIColor+MarXTools.m */,
+				81DD632A20DCFAE7004A49F6 /* UIImageView+MarXTools.m */,
+				81DD632B20DCFAE7004A49F6 /* NSObject+MarXTools.m */,
+				81DD632C20DCFAE7004A49F6 /* UITextView+MarXTools.m */,
+				81DD632D20DCFAE7004A49F6 /* NSDictionary+MarXTools.m */,
+				81DD632E20DCFAE7004A49F6 /* MarXToolsCategory.h */,
+				81DD632F20DCFAE7004A49F6 /* NSUserDefaults+MarXTools.m */,
+				81DD633020DCFAE7004A49F6 /* UIImage+MarXTools.h */,
+				81DD633120DCFAE7004A49F6 /* UIViewController+MarXTools.h */,
+				81DD633220DCFAE7004A49F6 /* UIView+MarXTools.m */,
+				81DD633320DCFAE7004A49F6 /* UIButton+MarXTools.m */,
 			);
 			path = Category;
 			sourceTree = "<group>";
@@ -351,16 +328,6 @@
 			children = (
 			);
 			path = Assets;
-			sourceTree = "<group>";
-		};
-		81F892CC20E4C19800460F48 /* Progress */ = {
-			isa = PBXGroup;
-			children = (
-				81F892CD20E4C28900460F48 /* MBProgressHUD+MarXTools.h */,
-				81F892CE20E4C28900460F48 /* MBProgressHUD+MarXTools.m */,
-				81F892D020E4D49600460F48 /* MarXToolsProgress.h */,
-			);
-			path = Progress;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -537,15 +504,11 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-MarXTools_Example/Pods-MarXTools_Example-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/MBProgressHUD/MBProgressHUD.framework",
 				"${BUILT_PRODUCTS_DIR}/MarXTools/MarXTools.framework",
-				"${BUILT_PRODUCTS_DIR}/Toast/Toast.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MBProgressHUD.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MarXTools.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Toast.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -574,27 +537,26 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				81F892CF20E4C28900460F48 /* MBProgressHUD+MarXTools.m in Sources */,
-				81AF75EE20F6DC51003AB709 /* UIColor+MarXTools.m in Sources */,
-				81AF75E320F6DC51003AB709 /* NSUserDefaults+MarXTools.m in Sources */,
-				81AF75EC20F6DC51003AB709 /* NSArray+MarXTools.m in Sources */,
-				81AF75E420F6DC51003AB709 /* UIView+MarXTools.m in Sources */,
-				81AF75EB20F6DC51003AB709 /* UILabel+MarXTools.m in Sources */,
-				81AF75E820F6DC51003AB709 /* NSString+MarXTools.m in Sources */,
-				81AF75E520F6DC51003AB709 /* UIImage+MarXTools.m in Sources */,
-				81AF75F020F6DC51003AB709 /* NSDate+MarXTools.m in Sources */,
-				81AF75ED20F6DC51003AB709 /* UIViewController+MarXTools.m in Sources */,
-				81AF75E620F6DC51003AB709 /* UIImageView+MarXTools.m in Sources */,
+				81DD634120DCFAE7004A49F6 /* NSObject+MarXTools.m in Sources */,
+				81DD634020DCFAE7004A49F6 /* UIImageView+MarXTools.m in Sources */,
+				81DD633A20DCFAE7004A49F6 /* UIViewController+MarXTools.m in Sources */,
+				81DD634220DCFAE7004A49F6 /* UITextView+MarXTools.m in Sources */,
+				81DD633D20DCFAE7004A49F6 /* UIWindow+MarXTools.m in Sources */,
+				81DD634520DCFAE7004A49F6 /* UIView+MarXTools.m in Sources */,
+				81DD634420DCFAE7004A49F6 /* NSUserDefaults+MarXTools.m in Sources */,
 				6003F59E195388D20070C39A /* marxAppDelegate.m in Sources */,
+				81DD633E20DCFAE7004A49F6 /* NSString+MarXTools.m in Sources */,
+				81DD633920DCFAE7004A49F6 /* UILabel+MarXTools.m in Sources */,
+				81DD633B20DCFAE7004A49F6 /* UIImage+MarXTools.m in Sources */,
 				6003F5A7195388D20070C39A /* marxViewController.m in Sources */,
-				81AF75E220F6DC51003AB709 /* NSObject+MarXTools.m in Sources */,
-				81AF75E920F6DC51003AB709 /* UITextView+MarXTools.m in Sources */,
-				81DD633620DCFAE7004A49F6 /* MarXToolsSystemConfiguration.m in Sources */,
+				81DD634320DCFAE7004A49F6 /* NSDictionary+MarXTools.m in Sources */,
+				81DD634620DCFAE7004A49F6 /* UIButton+MarXTools.m in Sources */,
+				81DD633720DCFAE7004A49F6 /* UITextField+MarXTools.m in Sources */,
+				81DD633620DCFAE7004A49F6 /* LWSystemConfiguration.m in Sources */,
+				81DD633820DCFAE7004A49F6 /* NSArray+MarXTools.m in Sources */,
+				81DD633C20DCFAE7004A49F6 /* NSDate+MarXTools.m in Sources */,
+				81DD633F20DCFAE7004A49F6 /* UIColor+MarXTools.m in Sources */,
 				6003F59A195388D20070C39A /* main.m in Sources */,
-				81AF75F120F6DC51003AB709 /* UIButton+MarXTools.m in Sources */,
-				81AF75EA20F6DC51003AB709 /* NSDictionary+MarXTools.m in Sources */,
-				81AF75E720F6DC51003AB709 /* UITextField+MarXTools.m in Sources */,
-				81AF75EF20F6DC51003AB709 /* UIWindow+MarXTools.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

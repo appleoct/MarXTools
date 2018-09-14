@@ -14,22 +14,7 @@
 
 @implementation NSDate (lw_format)
 
-+ (NSString *)lw_getNday:(NSInteger)n compareData:(NSDate*)d resultFormat:(NSString *)f
-{
-    NSDate *resultDate;
-    if (n != 0) {
-        NSTimeInterval ondDay = 24*60*60*1;
-        resultDate = [d initWithTimeIntervalSinceNow:ondDay*n];
-    }else{
-        resultDate = d;
-    }
-    NSDateFormatter *date_formater = [[NSDateFormatter alloc]init];
-    [date_formater setDateFormat:f];
-    NSString *date_str = [date_formater stringFromDate:resultDate];
-    return date_str;
-}
-
-+ (NSDateFormatter *)lw_finalTimestamp:(long)ftimestamp toFormat:(NSString *)format
+- (NSDateFormatter *)lw_finalTimestamp:(long)ftimestamp toFormat:(NSString *)format
 {
     NSDateFormatter *dateFormatter =[[NSDateFormatter alloc] init];
     dateFormatter.timeZone = [NSTimeZone timeZoneWithName:@"Asia/Shanghai"];
@@ -38,58 +23,58 @@
     return dateFormatter;
 }
 
-+ (NSDate *)lw_longTimestampString_to_date:(NSString *)timestamp
+- (NSDate *)lw_longTimestampString_to_date:(NSString *)timestamp
 {
     return [self lw_longTimestamp_to_date:[timestamp longLongValue]];
 }
 
-+ (NSDate *)lw_longTimestamp_to_date:(long)timestamp
+- (NSDate *)lw_longTimestamp_to_date:(long)timestamp
 {
     NSDate *timeData = [NSDate dateWithTimeIntervalSince1970:timestamp/1000];
     
     return timeData;
 }
 
-+ (NSDate *)lw_timestampString_to_date:(NSString *)timestamp
+- (NSDate *)lw_timestampString_to_date:(NSString *)timestamp
 {
     return [self lw_timestamp_to_date:[timestamp longLongValue]];
 }
 
-+ (NSDate *)lw_timestamp_to_date:(long)timestamp
+- (NSDate *)lw_timestamp_to_date:(long)timestamp
 {
     NSDate *timeData = [NSDate dateWithTimeIntervalSince1970:timestamp];
     
     return timeData;
 }
 
-+ (NSString *)lw_longTimestampString_to_normalTime:(NSString *)timestampString format:(NSString *)format
+- (NSString *)lw_longTimestampString_to_normalTime:(NSString *)timestampString format:(NSString *)format
 {
     return [self lw_longTimestamp_to_normalTime:[timestampString longLongValue] format:format];
 }
 
-+ (NSString *)lw_longTimestamp_to_normalTime:(long)timestamp format:(NSString *)format
+- (NSString *)lw_longTimestamp_to_normalTime:(long)timestamp format:(NSString *)format
 {
     NSDate *timeData = [NSDate dateWithTimeIntervalSince1970:timestamp/1000];
     
     return [[self lw_finalTimestamp:timestamp/1000 toFormat:format] stringFromDate:timeData];
 }
 
-+ (NSString *)lw_timestampString_to_normalTime:(NSString *)timestampString format:(NSString *)format
+- (NSString *)lw_timestampString_to_normalTime:(NSString *)timestampString format:(NSString *)format
 {
    return [self lw_timestamp_to_normalTime:[timestampString longLongValue] format:format];
 }
 
 
-+ (NSString *)lw_timestamp_to_normalTime:(long)timestamp format:(NSString *)format
+- (NSString *)lw_timestamp_to_normalTime:(long)timestamp format:(NSString *)format
 {
     NSDate *timeData = [NSDate dateWithTimeIntervalSince1970:timestamp];
     
     return [[self lw_finalTimestamp:timestamp toFormat:format] stringFromDate:timeData];
 }
 
-- (NSString *)lw_nsdate_to_timestamp
+- (NSString *)lw_nsdate_to_timestamp:(NSDate *)date
 {
-    NSTimeInterval a= [self timeIntervalSince1970];
+    NSTimeInterval a= [date timeIntervalSince1970];
     NSString*timeString = [NSString stringWithFormat:@"%0.f", a];//转为字符型
     
     return timeString;
@@ -102,19 +87,6 @@
     NSString*timeString = [NSString stringWithFormat:@"%0.f", a];//转为字符型
     
     return timeString;
-}
-
-+ (NSDate *)lw_normalTime_to_nsdate:(NSString *)time
-{
-    NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
-    [formatter setDateStyle:NSDateFormatterMediumStyle];
-    [formatter setTimeStyle:NSDateFormatterShortStyle];
-    [formatter setDateFormat:@"YYYY-MM-dd HH:mm:ss"];
-    NSTimeZone* timeZone = [NSTimeZone timeZoneWithName:@"Asia/Beijing"];
-    [formatter setTimeZone:timeZone];
-    
-    NSDate* date = [formatter dateFromString:time];
-    return date;
 }
 
 + (NSString *)lw_normalTime_to_timeStamp:(NSString *)time
@@ -132,7 +104,7 @@
     return timeSp;
 }
 
-+ (NSString *)lw_currentDate_to_noramlTimeWithFormat:(NSString *)format
+- (NSString *)lw_currentDate_to_noramlTimeWithFormat:(NSString *)format
 {
     NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
     formatter.timeZone = [NSTimeZone timeZoneWithName:@"Asia/Shanghai"];
@@ -142,28 +114,20 @@
     return [formatter stringFromDate:datenow];
 }
 
-- (NSString *)lw_nsdate_to_normalTimeWithFormat:(NSString *)format
+- (NSString *)lw_nsdate_to_normalTime:(NSDate *)date format:(NSString *)format
 {
     NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
     formatter.timeZone = [NSTimeZone timeZoneWithName:@"Asia/Shanghai"];
     [formatter setDateFormat:format];
 
-    return [formatter stringFromDate:self];
-}
-
-+ (NSString *)lw_currentTimeWithFormat:(NSString *)format
-{
-    NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
-    [formatter setDateFormat:format];
-    NSDate *datenow = [NSDate date];
-    return [formatter stringFromDate:datenow];
+    return [formatter stringFromDate:date];
 }
 
 @end
 
 
 static const unsigned componentFlags = (NSCalendarUnitYear| NSCalendarUnitMonth | NSCalendarUnitDay | NSCalendarUnitWeekOfMonth |  NSCalendarUnitHour | NSCalendarUnitMinute | NSCalendarUnitSecond | NSCalendarUnitWeekday | NSCalendarUnitWeekdayOrdinal);
-@implementation NSDate (lw_caendar)
+@implementation NSDate (lw_calculate)
 
 + (NSCalendar *) currentCalendar
 {
@@ -183,20 +147,6 @@ static const unsigned componentFlags = (NSCalendarUnitYear| NSCalendarUnitMonth 
 + (NSDate *) dateWithDaysBeforeNow: (NSInteger) days
 {
     return [[NSDate date] dateBySubtractingDays:days];
-}
-
-+ (NSDate *)lastYear
-{
-    NSTimeInterval aTimeInterval = [[NSDate date] timeIntervalSinceReferenceDate] + D_YEAR * (-1);
-    NSDate *newDate = [NSDate dateWithTimeIntervalSinceReferenceDate:aTimeInterval];
-    return newDate;
-}
-
-+ (NSDate *)nextYear
-{
-    NSTimeInterval aTimeInterval = [[NSDate date] timeIntervalSinceReferenceDate] + D_YEAR * 1;
-    NSDate *newDate = [NSDate dateWithTimeIntervalSinceReferenceDate:aTimeInterval];
-    return newDate;
 }
 
 + (NSDate *) dateTomorrow
@@ -235,36 +185,6 @@ static const unsigned componentFlags = (NSCalendarUnitYear| NSCalendarUnitMonth 
     NSTimeInterval aTimeInterval = [[NSDate date] timeIntervalSinceReferenceDate] - D_MINUTE * dMinutes;
     NSDate *newDate = [NSDate dateWithTimeIntervalSinceReferenceDate:aTimeInterval];
     return newDate;
-}
-
-- (BOOL) isDayTime
-{
-    BOOL daytime = NO;
-    NSString *hourstring = [self stringWithFormat:@"HH"];
-    NSInteger hour = [hourstring integerValue];
-    //晚上6点到早上6点
-    if (hour>=18 || hour<= 6) {
-        daytime = NO;
-    }else
-    {
-        daytime = YES;
-    }
-    return daytime;
-}
-
-- (BOOL)isMidnight
-{
-    BOOL midnight = NO;
-    NSString *hourstring = [self stringWithFormat:@"HH"];
-    NSInteger hour = [hourstring integerValue];
-    //晚上6点到早上6点
-    if (hour>=23 || hour<= 5) {
-        midnight = YES;
-    }else
-    {
-        midnight = NO;
-    }
-    return midnight;
 }
 
 #pragma mark - String Properties
@@ -727,12 +647,6 @@ static const unsigned componentFlags = (NSCalendarUnitYear| NSCalendarUnitMonth 
     
     return theDate;
     
-}
-
-+ (NSTimeInterval)lw_comparesDate:(NSDate *)sDate edate:(NSDate *)eDate
-{
-    NSTimeInterval time = [eDate timeIntervalSinceDate:sDate];
-    return time;
 }
 
 + (NSString *)compareTwoDate_NoSecond:(NSDate *)sDate endTime:(NSDate *)eDate

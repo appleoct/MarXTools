@@ -1,5 +1,5 @@
 //
-//  MarXToolsSystemConfiguration.h
+//  LWSystemConfiguration.h
 //  MarXTools
 //
 //  Created by CodeRiding on 2018/6/22.
@@ -7,12 +7,12 @@
 
 #import <Foundation/Foundation.h>
 
-@interface MarXToolsSystemConfiguration : NSObject
+@interface LWSystemConfiguration : NSObject
 
 @end
 
 
-@interface MarXToolsSystemConfiguration (lw_phone)
+@interface LWSystemConfiguration (lw_phone)
 
 /**
  手机UUID
@@ -59,7 +59,7 @@
 @end
 
 
-@interface MarXToolsSystemConfiguration (lw_cache)
+@interface LWSystemConfiguration (lw_cache)
 
 /**
  清除缓存

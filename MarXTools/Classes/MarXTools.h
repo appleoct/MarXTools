@@ -10,7 +10,5 @@
 
 #import "MarXToolsCategory.h"
 #import "MarXToolsHandler.h"
-#import "MarXToolsToast.h"
-#import "MarXToolsProgress.h"
 
 #endif /* MarXTools_h */

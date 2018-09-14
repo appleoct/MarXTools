@@ -1,9 +1,9 @@
 {
   "name": "MarXTools",
-  "version": "0.11.0",
-  "summary": "MarX Repo",
+  "version": "0.1.0",
+  "summary": "A short description of MarXTools.",
   "description": "TODO: Add long description of the pod here.",
-  "homepage": "https://gitee.com/erliucxy/MarXTools",
+  "homepage": "https://github.com/codeRiding/MarXTools",
   "license": {
     "type": "MIT",
     "file": "LICENSE"
@@ -12,41 +12,11 @@
     "codeRiding": "coderiding@gmail.com"
   },
   "source": {
-    "git": "https://gitee.com/erliucxy/MarXTools.git",
-    "tag": "0.11.0"
+    "git": "https://github.com/codeRiding/MarXTools.git",
+    "tag": "0.1.0"
   },
-  "frameworks": [
-    "UIKit",
-    "AVFoundation"
-  ],
   "platforms": {
     "ios": "8.0"
   },
-  "source_files": "MarXTools/Classes/MarXTools.h",
-  "public_header_files": "MarXTools/Classes/MarXTools.h",
-  "subspecs": [
-    {
-      "name": "Handler",
-      "source_files": "MarXTools/Classes/Handler/**/*",
-      "public_header_files": "MarXTools/Classes/Handler/**/*.h"
-    },
-    {
-      "name": "Category",
-      "source_files": "MarXTools/Classes/Category/**/*",
-      "public_header_files": "MarXTools/Classes/Category/**/*.h"
-    },
-    {
-      "name": "ThirdParty",
-      "source_files": "MarXTools/Classes/ThirdParty/**/*",
-      "public_header_files": "MarXTools/Classes/ThirdParty/**/*.h",
-      "dependencies": {
-        "Toast": [
-          "~> 3.0"
-        ],
-        "MBProgressHUD": [
-          "~> 1.1.0"
-        ]
-      }
-    }
-  ]
+  "source_files": "MarXTools/Classes/**/*"
 }
