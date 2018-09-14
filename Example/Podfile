@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'MarXTools_Example' do
+  pod 'MarXTools', :path => '../'
+
+  target 'MarXTools_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end

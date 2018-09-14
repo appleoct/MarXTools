@@ -1,0 +1,6 @@
+framework module MarXTools {
+  umbrella header "MarXTools-umbrella.h"
+
+  export *
+  module * { export * }
+}

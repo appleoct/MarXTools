@@ -1,0 +1,6 @@
+framework module Pods_MarXTools_Example {
+  umbrella header "Pods-MarXTools_Example-umbrella.h"
+
+  export *
+  module * { export * }
+}
