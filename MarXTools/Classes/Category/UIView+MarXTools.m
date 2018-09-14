@@ -405,4 +405,16 @@ static char pointViewKey;
     self.frame = frame;
 }
 
+- (CGFloat)lw_endWithX:(CGFloat)x
+{
+    CGRect frame = self.frame;
+    return CGRectGetMaxX(frame) + x;
+}
+
+- (CGFloat)lw_endWithY:(CGFloat)y
+{
+    CGRect frame = self.frame;
+    return CGRectGetMaxY(frame) + y;
+}
+
 @end

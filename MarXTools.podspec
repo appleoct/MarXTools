@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name         = "MarXTools"
-  s.version      = "1.1.3"
+  s.version      = "1.1.4"
   s.summary      = "OC常用工具类"
 
   # This description is used to generate tags and improve search results.
@@ -72,6 +72,16 @@ Pod::Spec.new do |s|
 
   s.source       = { :git => "https://github.com/codeRiding/MarXTools.git", :tag => s.version }
 
+
+  # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
+  #
+  #  CocoaPods is smart about how it includes source code. For source files
+  #  giving a folder will include any swift, h, m, mm, c & cpp files.
+  #  For header files it will include any header in the folder.
+  #  Not including the public_header_files will make all headers public.
+  #
+
+  s.frameworks       = 'UIKit','AVFoundation'
   s.ios.deployment_target = '8.0'
 
   s.source_files = 'MarXTools/Classes/MarXTools.h'
@@ -88,6 +98,13 @@ Pod::Spec.new do |s|
     ss.source_files = 'MarXTools/Classes/Category/**/*'
     ss.public_header_files = 'MarXTools/Classes/Category/**/*.h'
   end
+
+  s.subspec 'ThirdParty' do |ss|
+    ss.source_files = 'MarXTools/Classes/ThirdParty/**/*'
+    ss.public_header_files = 'MarXTools/Classes/ThirdParty/**/*.h'
+    ss.dependency 'Toast', '~> 3.0'
+    ss.dependency 'MBProgressHUD', '~> 1.1.0'
+  end
   
   # s.resource_bundles = {
   #   'MarXTools' => ['MarXTools/Assets/*.png']
@@ -96,4 +113,5 @@ Pod::Spec.new do |s|
   # s.public_header_files = 'Pod/Classes/**/*.h'
   # s.frameworks = 'UIKit', 'MapKit'
   # s.dependency 'AFNetworking', '~> 2.3'
+
 end

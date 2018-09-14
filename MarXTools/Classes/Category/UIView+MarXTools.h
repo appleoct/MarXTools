@@ -110,4 +110,7 @@
 @property (nonatomic) CGFloat lw_centerY;     ///< Shortcut for center.y
 @property (nonatomic) CGPoint lw_origin;      ///< Shortcut for frame.origin.
 @property (nonatomic) CGSize  lw_size;        ///< Shortcut for frame.size.
+
+- (CGFloat)lw_endWithX:(CGFloat)x;
+- (CGFloat)lw_endWithY:(CGFloat)y;
 @end

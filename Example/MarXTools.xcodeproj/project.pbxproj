@@ -38,6 +38,7 @@
 		81DD634420DCFAE7004A49F6 /* NSUserDefaults+MarXTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 81DD632F20DCFAE7004A49F6 /* NSUserDefaults+MarXTools.m */; };
 		81DD634520DCFAE7004A49F6 /* UIView+MarXTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 81DD633220DCFAE7004A49F6 /* UIView+MarXTools.m */; };
 		81DD634620DCFAE7004A49F6 /* UIButton+MarXTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 81DD633320DCFAE7004A49F6 /* UIButton+MarXTools.m */; };
+		81F892CF20E4C28900460F48 /* MBProgressHUD+MarXTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 81F892CE20E4C28900460F48 /* MBProgressHUD+MarXTools.m */; };
 		873B8AEB1B1F5CCA007FD442 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 873B8AEA1B1F5CCA007FD442 /* Main.storyboard */; };
 		C4905C7FA50D4A6B8A616152 /* Pods_MarXTools_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C529C5807ADB52FA3BC5E8B5 /* Pods_MarXTools_Tests.framework */; };
 		C98ED880D47C26EC052AABFC /* Pods_MarXTools_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E036F8D7FA11D446C919FF6 /* Pods_MarXTools_Example.framework */; };
@@ -78,6 +79,7 @@
 		606FC2411953D9B200FFA9A0 /* Tests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Tests-Prefix.pch"; sourceTree = "<group>"; };
 		71719F9E1E33DC2100824A3D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		75542D71E3E05A73DB93158F /* Pods-MarXTools_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MarXTools_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-MarXTools_Example/Pods-MarXTools_Example.release.xcconfig"; sourceTree = "<group>"; };
+		813EFAED20E473FB005E37AD /* MarXToolsToast.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MarXToolsToast.h; sourceTree = "<group>"; };
 		81DD630E20DCFAE7004A49F6 /* LWSystemConfiguration.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LWSystemConfiguration.m; sourceTree = "<group>"; };
 		81DD630F20DCFAE7004A49F6 /* MarXToolsHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MarXToolsHandler.h; sourceTree = "<group>"; };
 		81DD631020DCFAE7004A49F6 /* MarXToolsPCH.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MarXToolsPCH.h; sourceTree = "<group>"; };
@@ -116,6 +118,9 @@
 		81DD633220DCFAE7004A49F6 /* UIView+MarXTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+MarXTools.m"; sourceTree = "<group>"; };
 		81DD633320DCFAE7004A49F6 /* UIButton+MarXTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+MarXTools.m"; sourceTree = "<group>"; };
 		81DD633420DCFAE7004A49F6 /* MarXTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MarXTools.h; sourceTree = "<group>"; };
+		81F892CD20E4C28900460F48 /* MBProgressHUD+MarXTools.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MBProgressHUD+MarXTools.h"; sourceTree = "<group>"; };
+		81F892CE20E4C28900460F48 /* MBProgressHUD+MarXTools.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "MBProgressHUD+MarXTools.m"; sourceTree = "<group>"; };
+		81F892D020E4D49600460F48 /* MarXToolsProgress.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MarXToolsProgress.h; sourceTree = "<group>"; };
 		827599E880D61D1D4225CEE4 /* Pods-MarXTools_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MarXTools_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MarXTools_Tests/Pods-MarXTools_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		873B8AEA1B1F5CCA007FD442 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B31B7E44077224223E75F70A /* Pods-MarXTools_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MarXTools_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MarXTools_Example/Pods-MarXTools_Example.debug.xcconfig"; sourceTree = "<group>"; };
@@ -252,6 +257,23 @@
 			name = "Podspec Metadata";
 			sourceTree = "<group>";
 		};
+		813EFAEB20E473FA005E37AD /* ThirdParty */ = {
+			isa = PBXGroup;
+			children = (
+				81F892CC20E4C19800460F48 /* Progress */,
+				813EFAEC20E473FB005E37AD /* Toast */,
+			);
+			path = ThirdParty;
+			sourceTree = "<group>";
+		};
+		813EFAEC20E473FB005E37AD /* Toast */ = {
+			isa = PBXGroup;
+			children = (
+				813EFAED20E473FB005E37AD /* MarXToolsToast.h */,
+			);
+			path = Toast;
+			sourceTree = "<group>";
+		};
 		81DD630B20DCFAE7004A49F6 /* MarXTools */ = {
 			isa = PBXGroup;
 			children = (
@@ -265,6 +287,7 @@
 		81DD630C20DCFAE7004A49F6 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				813EFAEB20E473FA005E37AD /* ThirdParty */,
 				81DD630D20DCFAE7004A49F6 /* Handler */,
 				81DD631220DCFAE7004A49F6 /* Category */,
 				81DD633420DCFAE7004A49F6 /* MarXTools.h */,
@@ -328,6 +351,16 @@
 			children = (
 			);
 			path = Assets;
+			sourceTree = "<group>";
+		};
+		81F892CC20E4C19800460F48 /* Progress */ = {
+			isa = PBXGroup;
+			children = (
+				81F892CD20E4C28900460F48 /* MBProgressHUD+MarXTools.h */,
+				81F892CE20E4C28900460F48 /* MBProgressHUD+MarXTools.m */,
+				81F892D020E4D49600460F48 /* MarXToolsProgress.h */,
+			);
+			path = Progress;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -504,11 +537,15 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-MarXTools_Example/Pods-MarXTools_Example-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/MBProgressHUD/MBProgressHUD.framework",
 				"${BUILT_PRODUCTS_DIR}/MarXTools/MarXTools.framework",
+				"${BUILT_PRODUCTS_DIR}/Toast/Toast.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MBProgressHUD.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MarXTools.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Toast.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -542,6 +579,7 @@
 				81DD633A20DCFAE7004A49F6 /* UIViewController+MarXTools.m in Sources */,
 				81DD634220DCFAE7004A49F6 /* UITextView+MarXTools.m in Sources */,
 				81DD633D20DCFAE7004A49F6 /* UIWindow+MarXTools.m in Sources */,
+				81F892CF20E4C28900460F48 /* MBProgressHUD+MarXTools.m in Sources */,
 				81DD634520DCFAE7004A49F6 /* UIView+MarXTools.m in Sources */,
 				81DD634420DCFAE7004A49F6 /* NSUserDefaults+MarXTools.m in Sources */,
 				6003F59E195388D20070C39A /* marxAppDelegate.m in Sources */,
