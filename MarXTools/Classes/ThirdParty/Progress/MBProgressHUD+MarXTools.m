@@ -12,12 +12,12 @@ static CGFloat FONT_SIZE = 14.0f;
 
 @implementation MBProgressHUD (MarXTools)
 
-+ (void)lw_showHubOnWindow
++ (void)lw_show
 {
     [MBProgressHUD showHUDAddedTo:[UIApplication sharedApplication].windows.firstObject animated:YES];
 }
 
-+ (void)lw_hideHubOnWindow
++ (void)lw_dismiss
 {
     [MBProgressHUD hideHUDForView:[UIApplication sharedApplication].windows.firstObject animated:YES];
 }

@@ -10,8 +10,8 @@
 
 @interface MBProgressHUD (MarXTools)
 
-+ (void)lw_showHubOnWindow;
-+ (void)lw_hideHubOnWindow;
++ (void)lw_show;
++ (void)lw_dismiss;
 
 + (MBProgressHUD *)lw_showHubOnWindow:(NSString *)title;
 + (MBProgressHUD *)lw_showHubOnWindow:(NSString *)title hideAfter:(NSTimeInterval)interval;

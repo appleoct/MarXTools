@@ -195,6 +195,36 @@ static const unsigned componentFlags = (NSCalendarUnitYear| NSCalendarUnitMonth 
     return newDate;
 }
 
+- (BOOL) isDayTime
+{
+    BOOL daytime = NO;
+    NSString *hourstring = [self stringWithFormat:@"HH"];
+    NSInteger hour = [hourstring integerValue];
+    //晚上6点到早上6点
+    if (hour>=18 || hour<= 6) {
+        daytime = NO;
+    }else
+    {
+        daytime = YES;
+    }
+    return daytime;
+}
+
+- (BOOL)isMidnight
+{
+    BOOL midnight = NO;
+    NSString *hourstring = [self stringWithFormat:@"HH"];
+    NSInteger hour = [hourstring integerValue];
+    //晚上6点到早上6点
+    if (hour>=23 || hour<= 5) {
+        midnight = YES;
+    }else
+    {
+        midnight = NO;
+    }
+    return midnight;
+}
+
 #pragma mark - String Properties
 - (NSString *) stringWithFormat: (NSString *) format
 {

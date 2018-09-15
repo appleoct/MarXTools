@@ -145,6 +145,22 @@
 - (BOOL) isNextWeek;
 - (BOOL) isLastWeek;
 
+
+/**
+ 判断是否为白天 {早上6点到晚上6点}
+
+ @return bool值
+ */
+- (BOOL) isDayTime;
+
+
+/**
+ 判断是否为深夜 {晚上11点到早上5点}
+
+ @return bool值
+ */
+- (BOOL) isMidnight;
+
 - (BOOL) isSameMonthAsDate: (NSDate *) aDate;
 - (BOOL) isThisMonth;
 - (BOOL) isNextMonth;

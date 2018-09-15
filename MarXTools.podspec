@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name         = "MarXTools"
-  s.version      = "1.1.5"
+  s.version      = "1.1.6"
   s.summary      = "OC常用工具类"
 
   # This description is used to generate tags and improve search results.
@@ -71,6 +71,15 @@ Pod::Spec.new do |s|
   #
 
   s.source       = { :git => "https://github.com/codeRiding/MarXTools.git", :tag => s.version }
+
+
+  # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
+  #
+  #  CocoaPods is smart about how it includes source code. For source files
+  #  giving a folder will include any swift, h, m, mm, c & cpp files.
+  #  For header files it will include any header in the folder.
+  #  Not including the public_header_files will make all headers public.
+  #
 
   s.frameworks       = 'UIKit','AVFoundation'
   s.ios.deployment_target = '8.0'
