@@ -14,6 +14,18 @@
 
 @interface NSDate (lw_format)
 
+
+/**
+ 某个date的n天后
+
+ @param n 几天后
+ @param d 某个date
+ @param f 返回的时间格式
+ @return 返回结果
+ */
++ (NSString *)lw_getNday:(NSInteger)n compareData:(NSDate*)d resultFormat:(NSString *)f;
+
+
 /**
  毫秒时间戳->NSDate
 
@@ -55,6 +67,16 @@
  */
 + (NSString *)lw_normalTime_to_timeStamp:(NSString *)time;
 
+
+/**
+ 正常时间->NSDate
+ 正常时间格式应该为：yyyy-MM-dd HH:mm:ss
+ @param time 正常时间
+ @return NSDate
+ */
++ (NSDate *)lw_normalTime_to_nsdate:(NSString *)time;
+
+
 /**
  毫秒时间戳->正常的时间
  yyyy-MM-dd HH:mm:ss
@@ -93,7 +115,7 @@
 
 
 /**
- 获取当前时间
+ 获取当前时间NSDate
 
  @param format 返回时间的格式 {YYYY-MM-dd 、YYYY年MM月、HH:mm}
  @return 返回的时间
@@ -111,6 +133,8 @@
 + (NSCalendar *) currentCalendar; // avoid bottlenecks
 
 // Relative dates from the current date
++ (NSDate *) lastYear;
++ (NSDate *) nextYear;
 + (NSDate *) dateTomorrow;
 + (NSDate *) dateYesterday;
 + (NSDate *) dateWithDaysFromNow: (NSInteger) days;
@@ -242,6 +266,7 @@
 
 + (NSString *)compareTwoDate:(NSDate *)sDate endTime:(NSDate *)eDate;
 
++ (NSTimeInterval)lw_comparesDate:(NSDate *)sDate edate:(NSDate *)eDate;
 
 /**
  时间戳->星期几

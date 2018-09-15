@@ -14,6 +14,21 @@
 
 @implementation NSDate (lw_format)
 
++ (NSString *)lw_getNday:(NSInteger)n compareData:(NSDate*)d resultFormat:(NSString *)f
+{
+    NSDate *resultDate;
+    if (n != 0) {
+        NSTimeInterval ondDay = 24*60*60*1;
+        resultDate = [d initWithTimeIntervalSinceNow:ondDay*n];
+    }else{
+        resultDate = d;
+    }
+    NSDateFormatter *date_formater = [[NSDateFormatter alloc]init];
+    [date_formater setDateFormat:f];
+    NSString *date_str = [date_formater stringFromDate:resultDate];
+    return date_str;
+}
+
 + (NSDateFormatter *)lw_finalTimestamp:(long)ftimestamp toFormat:(NSString *)format
 {
     NSDateFormatter *dateFormatter =[[NSDateFormatter alloc] init];
@@ -89,6 +104,19 @@
     return timeString;
 }
 
++ (NSDate *)lw_normalTime_to_nsdate:(NSString *)time
+{
+    NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
+    [formatter setDateStyle:NSDateFormatterMediumStyle];
+    [formatter setTimeStyle:NSDateFormatterShortStyle];
+    [formatter setDateFormat:@"YYYY-MM-dd HH:mm:ss"];
+    NSTimeZone* timeZone = [NSTimeZone timeZoneWithName:@"Asia/Beijing"];
+    [formatter setTimeZone:timeZone];
+    
+    NSDate* date = [formatter dateFromString:time];
+    return date;
+}
+
 + (NSString *)lw_normalTime_to_timeStamp:(NSString *)time
 {
     NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
@@ -155,6 +183,20 @@ static const unsigned componentFlags = (NSCalendarUnitYear| NSCalendarUnitMonth 
 + (NSDate *) dateWithDaysBeforeNow: (NSInteger) days
 {
     return [[NSDate date] dateBySubtractingDays:days];
+}
+
++ (NSDate *)lastYear
+{
+    NSTimeInterval aTimeInterval = [[NSDate date] timeIntervalSinceReferenceDate] + D_YEAR * (-1);
+    NSDate *newDate = [NSDate dateWithTimeIntervalSinceReferenceDate:aTimeInterval];
+    return newDate;
+}
+
++ (NSDate *)nextYear
+{
+    NSTimeInterval aTimeInterval = [[NSDate date] timeIntervalSinceReferenceDate] + D_YEAR * 1;
+    NSDate *newDate = [NSDate dateWithTimeIntervalSinceReferenceDate:aTimeInterval];
+    return newDate;
 }
 
 + (NSDate *) dateTomorrow
@@ -685,6 +727,12 @@ static const unsigned componentFlags = (NSCalendarUnitYear| NSCalendarUnitMonth 
     
     return theDate;
     
+}
+
++ (NSTimeInterval)lw_comparesDate:(NSDate *)sDate edate:(NSDate *)eDate
+{
+    NSTimeInterval time = [eDate timeIntervalSinceDate:sDate];
+    return time;
 }
 
 + (NSString *)compareTwoDate_NoSecond:(NSDate *)sDate endTime:(NSDate *)eDate
