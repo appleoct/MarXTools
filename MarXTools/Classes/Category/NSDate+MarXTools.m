@@ -16,17 +16,12 @@
 
 + (NSString *)lw_getNday:(NSInteger)n compareData:(NSDate*)d resultFormat:(NSString *)f
 {
-    NSDate *resultDate;
-    if (n != 0) {
-        NSTimeInterval ondDay = 24*60*60*1;
-        resultDate = [d initWithTimeIntervalSinceNow:ondDay*n];
-    }else{
-        resultDate = d;
-    }
-    NSDateFormatter *date_formater = [[NSDateFormatter alloc]init];
-    [date_formater setDateFormat:f];
-    NSString *date_str = [date_formater stringFromDate:resultDate];
-    return date_str;
+    NSTimeInterval time = 24*60*60*1*n;
+    NSDateFormatter * dateFormatter = [[NSDateFormatter alloc] init];
+    [dateFormatter setDateFormat:f];
+    NSDate * result = [d dateByAddingTimeInterval:time];
+    NSString * r = [dateFormatter stringFromDate:result];
+    return r;
 }
 
 + (NSDateFormatter *)lw_finalTimestamp:(long)ftimestamp toFormat:(NSString *)format

@@ -31,13 +31,18 @@
     NSDate *sdate = [NSDate lw_normalTime_to_nsdate:@"2018-09-06 14:36:43"];
     NSDate *edate = [NSDate date];
     NSTimeInterval s = [NSDate lw_comparesDate:sdate edate:edate];
-    NSLog(@"++%f",s);
+  
+    
+    NSString *r = [NSDate lw_getNday:1 compareData:sdate resultFormat:@"yyyy-MM-dd HH:mm:ss"];
+    NSLog(@"----00%@",r);
     
 }
 
 - (void)clickbutton{
-    NSLog(@"----%@",[self.view lw_allSubViews]);
-    [MBProgressHUD lw_showHubOnWindow:@"上传成功" image:lw_image(@"success") hideAfter:2];
+    
+    [MBProgressHUD lw_show];
+    //NSLog(@"----%@",[self.view lw_allSubViews]);
+   // [MBProgressHUD lw_showHubOnWindow:@"上传成功" image:lw_image(@"success") hideAfter:2];
 }
 
 
