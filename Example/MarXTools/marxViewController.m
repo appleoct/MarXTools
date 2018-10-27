@@ -28,13 +28,13 @@
 	// Do any additional setup after loading the view, typically from a nib.
     
     ///2018-09-06 14:36:43
-    NSDate *sdate = [NSDate lw_normalTime_to_nsdate:@"2018-09-06 14:36:43"];
+    NSDate *sdate = [NSDate lw_normalTime_to_nsdate:@"2018-10-27 09:20:43"];
     NSDate *edate = [NSDate date];
-    NSTimeInterval s = [NSDate lw_comparesDate:sdate edate:edate];
+    NSString *s = [NSDate lw_compareTwoDateMaohao:sdate endTime:edate];
   
     
-    NSString *r = [NSDate lw_getNday:1 compareData:sdate resultFormat:@"yyyy-MM-dd HH:mm:ss"];
-    NSLog(@"----00%@",r);
+    ///NSString *r = [NSDate lw_getNday:1 compareData:sdate resultFormat:@"yyyy-MM-dd HH:mm:ss"];
+    NSLog(@"%@",s);
     
 }
 
