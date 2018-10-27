@@ -268,6 +268,8 @@
 
 + (NSTimeInterval)lw_comparesDate:(NSDate *)sDate edate:(NSDate *)eDate;
 
++ (NSString *)lw_compareTwoDateMaohao:(NSDate *)sDate endTime:(NSDate *)eDate;
+
 /**
  时间戳->星期几
 

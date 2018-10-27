@@ -778,6 +778,14 @@ static const unsigned componentFlags = (NSCalendarUnitYear| NSCalendarUnitMonth 
     return stringTimeInterval;
 }
 
++ (NSString *)lw_compareTwoDateMaohao:(NSDate *)sDate endTime:(NSDate *)eDate
+{
+    NSCalendar *calendar = [NSCalendar currentCalendar];
+    NSCalendarUnit type = NSCalendarUnitHour | NSCalendarUnitMinute | NSCalendarUnitSecond;
+    NSDateComponents *cmps = [calendar components:type fromDate:sDate toDate:eDate options:0];
+    return [NSString stringWithFormat:@"%ld:%ld:%ld",cmps.hour,cmps.minute,cmps.second];
+}
+
 - (NSString *)difftime
 {
     NSDate *nowTime = [NSDate date];
