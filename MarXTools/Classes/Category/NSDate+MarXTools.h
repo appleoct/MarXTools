@@ -269,6 +269,15 @@
 + (NSTimeInterval)lw_comparesDate:(NSDate *)sDate edate:(NSDate *)eDate;
 
 + (NSString *)lw_compareTwoDateMaohao:(NSDate *)sDate endTime:(NSDate *)eDate;
+    
+/**
+ 比较两个时间差
+ 
+ @param sDate 开始时间
+ @param eDate 结束时间
+ @return 天数
+ */
++ (NSInteger )compareTwoDateBackDays:(NSDate *)sDate endTime:(NSDate *)eDate;
 
 /**
  时间戳->星期几

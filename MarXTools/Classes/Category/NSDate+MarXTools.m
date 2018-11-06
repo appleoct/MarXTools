@@ -778,6 +778,24 @@ static const unsigned componentFlags = (NSCalendarUnitYear| NSCalendarUnitMonth 
     return stringTimeInterval;
 }
 
+#pragma mark - 比较两个时间，返回天数
++ (NSInteger )compareTwoDateBackDays:(NSDate *)sDate endTime:(NSDate *)eDate
+{
+    /**
+     * 要比较的时间单位,常用如下,可以同时传：
+     *    NSCalendarUnitDay : 天
+     *    NSCalendarUnitYear : 年
+     *    NSCalendarUnitMonth : 月
+     *    NSCalendarUnitHour : 时
+     *    NSCalendarUnitMinute : 分
+     *    NSCalendarUnitSecond : 秒
+     */
+    NSCalendar *calendar = [NSCalendar currentCalendar];
+    NSCalendarUnit type =   NSCalendarUnitDay;
+    NSDateComponents *cmps = [calendar components:type fromDate:sDate toDate:eDate options:0];
+    return cmps.day;
+}
+
 + (NSString *)lw_compareTwoDateMaohao:(NSDate *)sDate endTime:(NSDate *)eDate
 {
     NSCalendar *calendar = [NSCalendar currentCalendar];
